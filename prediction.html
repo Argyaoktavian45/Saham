@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Saham - StockAnalyzer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>StockAnalyzer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="analysis.html">Analisis</a></li>
+                    <li><a href="prediction.html" class="active">Prediksi</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Prediksi Harga Saham</h2>
+        
+        <div class="prediction-intro">
+            <p>Gunakan model prediksi berbasis machine learning untuk memperkirakan pergerakan saham di masa depan.</p>
+        </div>
+        
+        <div class="prediction-controls">
+            <select id="predictionStock">
+                <option value="">Pilih Saham</option>
+                <option value="BBCA.JK">BBCA.JK</option>
+                <option value="TLKM.JK">TLKM.JK</option>
+                <option value="UNVR.JK">UNVR.JK</option>
+            </select>
+            
+            <select id="timeHorizon">
+                <option value="7">1 Minggu</option>
+                <option value="30">1 Bulan</option>
+                <option value="90">3 Bulan</option>
+            </select>
+            
+            <button id="runPrediction">Jalankan Prediksi</button>
+        </div>
+        
+        <div class="prediction-results">
+            <div class="chart-container">
+                <canvas id="predictionChart"></canvas>
+            </div>
+            
+            <div class="prediction-details">
+                <h3>Detail Prediksi</h3>
+                <div id="predictionMetrics">
+                    <p>Akurasi Model: <span id="accuracy">-</span></p>
+                    <p>Prediksi Harga: <span id="predictedPrice">-</span></p>
+                    <p>Keyakinan: <span id="confidence">-</span></p>
+                </div>
+                
+                <div class="prediction-insight">
+                    <h4>Insight</h4>
+                    <p id="predictionInsight">Jalankan prediksi untuk melihat insight.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 StockAnalyzer</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="js/prediction.js"></script>
+</body>
+</html>

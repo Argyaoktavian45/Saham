@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Saham - StockAnalyzer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>StockAnalyzer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="analysis.html" class="active">Analisis</a></li>
+                    <li><a href="prediction.html">Prediksi</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Analisis Saham Mendalam</h2>
+        
+        <div class="analysis-controls">
+            <select id="stockSelect">
+                <option value="">Pilih Saham</option>
+                <option value="BBCA.JK">BBCA.JK</option>
+                <option value="TLKM.JK">TLKM.JK</option>
+                <option value="UNVR.JK">UNVR.JK</option>
+            </select>
+            
+            <select id="analysisType">
+                <option value="technical">Teknikal</option>
+                <option value="fundamental">Fundamental</option>
+                <option value="sentiment">Sentimen</option>
+            </select>
+            
+            <button id="runAnalysis">Jalankan Analisis</button>
+        </div>
+        
+        <div class="analysis-results">
+            <div class="chart-container">
+                <canvas id="analysisChart"></canvas>
+            </div>
+            
+            <div class="analysis-report">
+                <h3 id="reportTitle">Laporan Analisis</h3>
+                <div id="reportContent">
+                    <p>Pilih saham dan jenis analisis untuk melihat hasil.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 StockAnalyzer</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="js/analysis.js"></script>
+</body>
+</html>

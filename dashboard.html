@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - StockAnalyzer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>StockAnalyzer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="analysis.html">Analisis</a></li>
+                    <li><a href="prediction.html">Prediksi</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Dashboard Saham</h2>
+        
+        <div class="stock-search">
+            <input type="text" id="stockSymbol" placeholder="Masukkan kode saham (contoh: BBCA.JK)">
+            <button id="searchStock">Cari</button>
+        </div>
+        
+        <div class="dashboard-grid">
+            <div class="chart-container">
+                <canvas id="priceChart"></canvas>
+            </div>
+            
+            <div class="indicators">
+                <h3>Indikator Teknikal</h3>
+                <div class="indicator-grid">
+                    <div class="indicator-card">
+                        <h4>RSI (14)</h4>
+                        <p id="rsiValue">-</p>
+                    </div>
+                    <div class="indicator-card">
+                        <h4>MACD</h4>
+                        <p id="macdValue">-</p>
+                    </div>
+                    <div class="indicator-card">
+                        <h4>SMA (50)</h4>
+                        <p id="sma50Value">-</p>
+                    </div>
+                    <div class="indicator-card">
+                        <h4>SMA (200)</h4>
+                        <p id="sma200Value">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="watchlist">
+                <h3>Watchlist Saya</h3>
+                <ul id="watchlistItems">
+                    <!-- Item watchlist akan dimuat via JavaScript -->
+                </ul>
+                <button id="addToWatchlist">Tambahkan ke Watchlist</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 StockAnalyzer</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

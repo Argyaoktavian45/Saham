@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - StockAnalyzer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>StockAnalyzer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="analysis.html">Analisis</a></li>
+                    <li><a href="prediction.html">Prediksi</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html" class="active">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Hubungi Saya</h2>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <p><strong>Email:</strong> email@anda.com</p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/anda" target="_blank">linkedin.com/in/anda</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/anda" target="_blank">github.com/anda</a></p>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Kirim Pesan</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nama:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subjek:</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Pesan:</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 StockAnalyzer</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
